@@ -107,11 +107,15 @@ Module Module1
 
             If auswahl <> "x" Then
                 Console.WriteLine(vbCrLf & "Weiter mit beliebiger Taste...")
-                Console.ReadKey()
+                Console.ReadLine()
             End If
 
         Loop While auswahl <> "x" ' Beendet die Schleife, wenn 'x' eingegeben wurde
-    End Sub
+        'Dauerhafte Speichrung'
+        DatenSpeichern()
+        Console.WriteLine(vbCrLf & "Programm beendet. Auf Wiedersehen!")
+        Console.ReadLine()
+    End Sub
 
     Sub BenutzerAnlegen()
         Console.WriteLine()
